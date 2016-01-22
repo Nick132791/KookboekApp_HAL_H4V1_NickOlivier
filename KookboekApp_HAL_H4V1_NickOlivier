@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kookboek app</title>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+<p id="helloText">Voer hieronder uw eerste ingrediënt in. </p>
+<button id="clickButton">Eerste ingrediënt</button>
+
+
+<script> 
+var myButton = document.getElementById("clickButton");
+var myText = document.getElementById("helloText");
+
+myButton.addEventListener('click', Kookboek, false);
+
+function Kookboek() {
+	var invoer1 = prompt("Wat is uw eerste ingrediënt?");
+	window.confirm("Is dit uw eerste ingrediënt?: "+invoer1);
+	var invoer2 = prompt("Wat is uw tweede ingrediënt");
+	window.confirm("Is dit uw tweede ingrediënt?: "+invoer2);
+	var bewerking = prompt("Hoe wilt u deze ingrediënten samenvoegen tot het uiteindelijke resultaat? Bijvoobeeld, bakken, frituren, of iets dergelijks");
+	window.confirm("Weet u zeker dat " +bewerking +" de juiste bewerking is?");
+	var tijd = prompt("Hoelang duurt het gerecht in minuten om te bereiden?");
+	window.confirm("Weet u zeker dat het " +tijd +" minuten duurt?");
+	window.alert(invoer1 +" en " +invoer2 +" zijn de door u gekozen ingrediënten. " +bewerking +" is de door u gekozen bewerking. Het gerecht duurt " +tijd +" minuten.");
+	console.log(invoer1);
+}
+</script>
+
+</body>
+</html>
